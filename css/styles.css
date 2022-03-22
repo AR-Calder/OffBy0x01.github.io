@@ -365,7 +365,7 @@ td {
 
   pre,
   blockquote {
-    border: 1px solid var(--base01) ;
+    border: 1px solid var(--orange) ;
     padding-right: 1em;
     page-break-inside: avoid;
   }
