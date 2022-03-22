@@ -365,7 +365,7 @@ td {
 
   pre,
   blockquote {
-    border: 1px solid var(--orange) ;
+    border: 1px solid var(--base01) ;
     padding-right: 1em;
     page-break-inside: avoid;
   }
@@ -401,7 +401,7 @@ nav {
     top: 0;
     background-color: var(--base03);
     text-align: center;
-    color: var(--base0);
+    color: var(--orange);
     border-bottom: 1px dashed var(--base02);
     padding-bottom: 1em;
     font-size: 0.95em;
