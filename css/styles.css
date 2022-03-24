@@ -16,7 +16,7 @@
 }
 
 html {
-  font-family: 'Nova Mono', monospace;
+  font-family: 'VT323', monospace;
   color: var(--base0);
   background-color: var(--base03);
   overflow-y: scroll;
@@ -35,7 +35,6 @@ pre {
 
 body {
   max-width: 1000px;
-  font-family: 'Nova Mono', monospace;
   line-height: 1.5em;
   padding: 1em;
   margin-right:auto;
