@@ -1,4 +1,6 @@
 :root {
+    /* colours based on solarized-dark by Ethan Schoonover
+    https://ethanschoonover.com/solarized/#usage-development */
     --yellow: #b58900;
     --orange: #cb4b16;
     --red: #dc322f;
@@ -14,6 +16,7 @@
 }
 
 html {
+  font-family: 'Nova Mono', monospace;
   color: var(--base0);
   background-color: var(--base03);
   overflow-y: scroll;
@@ -27,13 +30,12 @@ pre {
   border-radius: 0px;
   overflow: auto;
   text-align: center;
-  font-weight: bolder;
-  font-family: 'Courier Prime'
+  font-weight: bold;
 }
 
 body {
   max-width: 1000px;
-  font-family: Verdana, sans-serif;
+  font-family: 'Nova Mono', monospace;
   line-height: 1.5em;
   padding: 1em;
   margin-right:auto;
