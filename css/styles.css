@@ -74,10 +74,6 @@ h1, h2, h3, h4, h5 {
   color: var(--yellow) 
 }
 
-h1 {
-  border-bottom: 1px solid var(--base01) !important;
-}
-
 h1::before {
   content: "# "
 }
