@@ -1,13 +1,14 @@
 ./posts/new_blog.md
-./projects/year 3 - snmp personal project.pdf
-./projects/year 2 - digital forensics.pdf
-./projects/year 4 - mobile forensics whitepaper.pdf
-./projects/year 3 - exploit development.pdf
-./projects/year 4 - cybersecurity for the vulnerable (andrea project).pdf
-./projects/year 4 - honours project - cuda ids acceleration.pdf
-./projects/year 3 - network infrastucture testing.pdf
-./projects/year 3 - web application testing.pdf
-./projects/year 3 - group project proposal.pdf
-./projects/year 4 - honours project - proposal.pdf
-./index.html
+./doc/year_4-cybersecurity_for_the_vulnerable.pdf
+./doc/year_3-exploit_development.pdf
+./doc/year_4-honours_project_dissertation.pdf
+./doc/year_2-digital_forensics.pdf
+./doc/year_4-mobile_forensics_whitepaper.pdf
+./doc/year_3-network_infrastucture_testing.pdf
+./doc/year_4-honours_project_proposal.pdf
+./doc/year_3-group_project_proposal.pdf
+./doc/year_3-snmp_personal_project.pdf
+./doc/year_3-web_application_testing.pdf
+./about.md
 ./css/styles.css
+./projects.md
