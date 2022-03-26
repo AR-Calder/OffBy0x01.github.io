@@ -15,7 +15,7 @@
 			<meta property="og:description" content="How I created my new blog using a modified version of ssg5 and github pages" />
 			<meta property="og:type" content="article" />
 			<meta property="og:url" content="/posts/new_blog" />
-			<meta property="og:image" content="https://offby0x01.xyz" />
+			<meta property="og:image" content="offby0x01.xyz" />
 
 </head>
 
@@ -35,11 +35,34 @@
 </nav>
 
 <article>
-<h1 id="moving-from-traditional-hosting-to-github-pages">Moving from traditional hosting to github pages</h1>
-<p>Since uni I have had a wix (i know…) based site which hosted old coursework - and was eventually supposed to host blog content. It was easy to setup and easy to customize main content but rather awkward to blog on, and cost quite a lot for what essentially ammounted to static content - in my use case.</p>
-<h2 id="why-ssg5">Why SSG5</h2>
-<p>Every so often I will have a surge of inspiration to finally get rid of it, to use the latest and greatest static website generators and I’ll spend a few days writing something in gatsby, nextJs, hell - even pure HTML. Ultimately I find a way to over complicate it - which these libraries lend themselves to- usually in an effort to make future blogging easier (ironically), then either get stuck, worn out, or convinced that X library would make this whole thing way easier.</p>
-<p>Eventually, my library/framework hopping landed me here - SSG5.</p>
+<h1 id="in-the-beginning---traditional-hosting">In the beginning - traditional hosting</h1>
+<p>Since uni I have had a wix (i know…) based site which hosted old coursework - and was eventually supposed to host blog content. It was easy to setup and easy to customize main content but rather awkward to blog on, and cost quite a lot for what essentially ammounted to static content - in my use case. I also had a google workspaces mail account - which again was really easy to setup but was overkill for my purposes.</p>
+<h1 id="technologies-used">Technologies Used</h1>
+<h2 id="ssg6">SSG6</h2>
+<p>Every so often I would have a surge of inspiration to finally get rid of my old website, to use the latest and greatest to build a beautiful static website. I’d then spend a few days writing something in gatsby, nextJs, hell - even pure HTML. Ultimately I find a way to over complicate it - which these libraries lend themselves to- usually in an effort to make future blogging easier (ironically), then either get stuck, worn out, or convinced that X library would make this whole thing way easier. Usually more than one of these. Eventually, my library/framework hopping landed me here - SSG5/SSG6.</p>
+<p>SSG6 (Static Site Generator 6) is a POSIX compliant shell script written by <a href="https://www.romanzolotarev.com/">Roman Zolotarev</a>, which I modified to suit my own needs. The documentation for the original can be found <a href="https://www.romanzolotarev.com/ssg.html">here</a>.</p>
+<p>On top of the excellent work by Roman, I’ve added:</p>
+<ul>
+<li>pandoc support - adding in-document control of <code>title</code>, <code>description</code>, <code>date</code> &amp; <code>tags</code> for each post.</li>
+<li>pagination - which is controlled by <code>max_page_posts</code> in the script.</li>
+<li>home page generation - to show my most recent posts first</li>
+<li>comments - so that if you are unfamiliar with shell, you can still work out wtf is actually going on.</li>
+<li>solarized-dark css</li>
+</ul>
+<p>In doing so, I’ve broken the posix compatability, however Bash 4 is relatively widely used, and I couldn’t think of another way to achieve what I wanted without adding another app anyways.</p>
+<h2 id="github-pages">Github Pages</h2>
+<p>There were a number of places I could’ve chosen for hosting but again I wanted something simple, that I couldn’t rabbit-hole myself with. In terms of easy of use, I don’t think anything compares to github pages.</p>
+<ul>
+<li>free - the standard <username>.github.io site costs nothing, which is great for prototyping</li>
+<li>easy to setup custom domain - once you have your A/AAAA records in place, you only need to click <code>add custom domain</code>, then <code>verify</code> once ready.</li>
+<li>free certificate - if you use a custom domain you don’t need to buy a cert seperately, github pages handles it all for you.</li>
+<li>prebuilt github actions for deployment - your site will automatically be updated by the <code>pages</code> action which runs whenever you push to <username>.github.io/master.</li>
+</ul>
+<h2 id="zoho-mail">Zoho mail</h2>
+<p>Zoho mail makes it incredibly easy to setup custom domains, they have great documentation and frankly great prices. My new mail service costs me £0.80 per month, previously google workspaces cost me £80 per year - or in other words is 88% more expensive!</p>
+<p>They have a really nice web app, their documentation is detailed and easy to follow, and they actually have support. If you want to check them out - <a href="https://store.zoho.eu/">here is a link</a> to their store.</p>
+<h1 id="implementation">Implementation</h1>
+<p>Writeup in progress :)</p>
 </article>
 
 <footer>
