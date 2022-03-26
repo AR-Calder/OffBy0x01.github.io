@@ -97,7 +97,6 @@ h5::before {
 blockquote {
   color: var(--orange);
   border-left: 3px solid var(--orange);
-  padding-left: 20px;
 }
 
 b, strong {
