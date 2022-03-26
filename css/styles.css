@@ -172,6 +172,14 @@ ol {
   padding: 0;
 }
 
+code {
+  /* default code*/
+  font-size: 100%;
+  font-family: inherit;
+  color: var(--orange);
+  background-color: var(--base02);
+}
+
 code span.dv {
   /* numbers */
   color: var(--blue);
