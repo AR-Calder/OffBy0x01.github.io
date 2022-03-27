@@ -11,6 +11,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Source+Code+Pro:ital,wght@0,200;0,300;1,200;1,300&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/65ad30df58.js" crossorigin="anonymous"></script>
 <title>OffBy0x01</title>
+<meta property="og:title" content="Docker 101 - How to setup docker on CentOS 8" />
+			<meta property="og:description" content="A quick reference guide to setup docker on centos 8." />
+			<meta property="og:type" content="article" />
+			<meta property="og:url" content="/posts/installing_docker_centos_8" />
+			<meta property="og:image" content="offby0x01.xyz" />
+
 </head>
 
 <pre>                                           
@@ -30,24 +36,20 @@
 </nav>
 
 <article>
-<h1 id=" Docker 101 - How to setup docker on CentOS 8" style="font-size:1.3em;border-bottom: none; padding-bottom: 0em;">
-  <a href="/./posts/installing_docker_centos_8.html"> Docker 101 - How to setup docker on CentOS 8</a>
-</h1>
-<p style="text-align:justified;">A quick reference guide to setup docker on centos 8.<br/>
-<strong><u>tags</u>: </strong>[ docker,container,ci,automation ]</p>
-
-<h1 id=" Docker 102 - Intro to Docker Architecture" style="font-size:1.3em;border-bottom: none; padding-bottom: 0em;">
-  <a href="/./posts/docker_architecture.html"> Docker 102 - Intro to Docker Architecture</a>
-</h1>
-<p style="text-align:justified;">A quick introductory guide to docker architecture <br/>
-<strong><u>tags</u>: </strong>[ docker,container,ci,automation ]</p>
-
-<h1 id=" Moving offby0x01.xyz to github pages" style="font-size:1.3em;border-bottom: none; padding-bottom: 0em;">
-  <a href="/./posts/new_blog.html"> Moving offby0x01.xyz to github pages</a>
-</h1>
-<p style="text-align:justified;">How I created my new blog using a modified version of ssg5 and github pages<br/>
-<strong><u>tags</u>: </strong>[ blog,pages,ssg5,ci,automation ]</p>
-
+<h1 id="how-to-setup-docker-on-centos-8">How to setup docker on CentOS 8</h1>
+<ol type="1">
+<li>uninstall any old versions of docker-related packages: <code>sudo yum remove -y docker \      docker-client \      docker-client-latest \      docker-common \      docker-latest \      docker-latest-logrotate \      docker-logrotate \      docker-engine</code></li>
+<li>install necessary utils: <code>sudo yum install -y yum-utils \      device-mapper-persistent-data \      lvm2</code></li>
+<li>add docker-ce repo to yum config: <code>sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</code></li>
+<li><p>install docker (c)ommunity (e)dition:</p>
+<pre><code>sudo yum install -y docker-ce</code></pre></li>
+<li><p>ensure service runs after rebooting:</p>
+<pre><code>sudo system ctl start docker \
+&amp;&amp; sudo system ctl enable docker </code></pre></li>
+<li><p>allow user to interact with docker:</p>
+<pre><code>sudo usermod -aG docker &lt;user&gt;</code></pre></li>
+<li><p>log out &amp; back in</p></li>
+</ol>
 </article>
 
 <footer>

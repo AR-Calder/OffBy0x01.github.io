@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Source+Code+Pro:ital,wght@0,200;0,300;1,200;1,300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/65ad30df58.js" crossorigin="anonymous"></script>
+<title>OffBy0x01</title>
+<meta property="og:title" content="Docker 102 - Intro to Docker Architecture" />
+			<meta property="og:description" content="A quick introductory guide to docker architecture " />
+			<meta property="og:type" content="article" />
+			<meta property="og:url" content="/posts/docker_architecture" />
+			<meta property="og:image" content="offby0x01.xyz" />
+
+</head>
+
+<pre>                                           
+  _____ ___ ___ _____     ___     ___ ___   
+ |     |  _|  _| __  |_ _|   |_ _|   |_  |  
+ |  |  |  _|  _| __ -| | | | |_'_| | |_| |_ 
+ |_____|_| |_| |_____|_  |___|_,_|___|_____|
+                     |___|                  </pre>
+
+<nav>
+   <a href="/index.html">home</a>
+   <a href="https://github.com/offby0x01">github</a>
+   <a href="https://twitter.com/OffBy0x01">twitter</a>
+   <a href="mailto:mail@offby0x01.xyz">contact</a>
+   <a href="/projects.html">projects</a>
+   <a href="/about.html">about me</a>
+</nav>
+
+<article>
+<h1 id="docker-102---architecture">Docker 102 - Architecture</h1>
+<p>A quick guide to docker architecture</p>
+<h2 id="client-server-architecture">Client-Server Architecture</h2>
+<p>Docker uses a client-server architecture. The client interacts with the docker daemon (dockerd) using a REST based api. Dockerd then manages docker objects and services such as; volumes, networks, images, and (of course) containers.</p>
+<p>Whenever we run a command with the docker client (docker), a corresponding request will be issued to dockerd. It is possible to use the REST API directly; there are docker packages for <code>Python</code>, <code>Go</code>, <code>NodeJS</code> and more.</p>
+<h2 id="images-registeries">Images &amp; Registeries:</h2>
+<p>When a container is created, it is based off an image; images act as templates for docker containers. An image is essentially a package that includes everything needed to run some targeted application. Images can be based of other images. For example you might have a <code>java</code> base image that you use to create a <code>spring-boot</code> image.</p>
+<p>Docker doesn’t come with any images by default. If a local copy of a given image does not already exist on the server it will need to pull it down from a registery.</p>
+<p>By default docker is setup to use Docker Hub which is a public registory where you can save your own images, as well as use images shared by others. There a few other options for container registories such as; AWS ECR, Azure (A)CR, Jfrog CCR, and Quay Cloud to name a few.</p>
+<p>You can of course also build your own images, you can do this with a dockerfile.</p>
+<h2 id="containers">Containers</h2>
+<p>You can think of containers as runnable impermanent read-write instances of images, and of images as a read-only collection of layers. Each change made to an container creates a new layer. However, these changes will not be saved unless an image of the new container state (base image + new layers) is created. In other words, writable layers are deleted when the container is deleted.</p>
+<p>Not to fear - images aren’t the only way to prevent loss of data: you can connect network<strong>s</strong> and/or attach storage (host or remote), ensuring important data isn’t lost. For example, gitlab runners often save build artifacts to the host.</p>
+<h2 id="a-note-on-security">A Note on Security</h2>
+<p>Whilst containers are fairly well isolated from the host by default, you should look into <code>SELinux</code> and <code>virtualization</code> if running any sensitive or internet facing applications in containers. I’ll go into this in more detail in future posts.</p>
+</article>
+
+<footer>
+  <hr>
+  <p> Generated with a modified version of <a href="https://github.com/OffBy0x01/ssg5">ssg5</a> By OffBy0x01 <br /> 
+</footer>
+</body>
