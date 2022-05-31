@@ -160,6 +160,7 @@ ol {
 }
 
 .sourceCode {
+  text-align: left;
   background-color: var(--base02);
   color: var(--base0);
 }
