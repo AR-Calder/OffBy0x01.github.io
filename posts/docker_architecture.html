@@ -50,7 +50,7 @@
 <p>You can think of containers as runnable impermanent read-write instances of images, and of images as a read-only collection of layers. Each change made to an container creates a new layer. However, these changes will not be saved unless an image of the new container state (base image + new layers) is created. In other words, writable layers are deleted when the container is deleted.</p>
 <p>Not to fear - images aren’t the only way to prevent loss of data: you can connect network<strong>s</strong> and/or attach storage (host or remote), ensuring important data isn’t lost. For example, gitlab runners often save build artifacts to the host.</p>
 <h2 id="a-note-on-security">A Note on Security</h2>
-<p>Whilst containers are fairly well isolated from the host by default, you should look into <code>SELinux</code> and <code>virtualization</code> if running any sensitive or internet facing applications in containers. I’ll go into this in more detail in future posts.</p>
+<p>Whilst containers are fairly well isolated from the host by default, you should look into <code>SELinux</code> and <code>AppArmour</code>, especially if running any sensitive or internet facing applications.</p>
 </article>
 
 <footer>
