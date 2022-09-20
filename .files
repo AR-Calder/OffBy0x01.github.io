@@ -4,6 +4,7 @@
 ./doc/year_2-digital_forensics.pdf
 ./doc/0x01_1_ingredient_1000_potion.nbt
 ./doc/0x01_all_potion_controller.nbt
+./doc/0x01_autofarm_v2.nbt
 ./doc/year_3-network_infrastucture_testing.pdf
 ./doc/year_3-snmp_personal_project.pdf
 ./doc/0x01_all_potion_factory.nbt
@@ -13,6 +14,7 @@
 ./doc/year_4-honours_project_dissertation.pdf
 ./doc/year_3-group_project_proposal.pdf
 ./doc/0x01_phantom_cannon.nbt
+./doc/0x01_controllable_crane.nbt
 ./doc/year_3-exploit_development.pdf
 ./doc/year_3-web_application_testing.pdf
 ./projects.md
